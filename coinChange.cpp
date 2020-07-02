@@ -18,14 +18,13 @@ int GreedyApproachCoinChagne(int amount, int change[]){
 
     int numOfCoins = sizeof(coins)/sizeof(coins[0]);
     int count = 0;
-    while(//impelemnt the loop condition){
+    while(amount>0){
         int k = findMaxCoin(amount, numOfCoins);
         if(k == -1)
-                //implement your code
-                //implement what should it print if solution found
+            cout<<"Not found";    
         else{
-                //Implement your code to minus a coin from the total amount. If total amount is 60 and a coin chosen is 15 then it will be 60-15 = 45
-                // Implement your code to save this coin in the array name 'change'
+            amount=amount - coins[k];
+            change[count++]=coins[k];
             }
     }
     return count;
